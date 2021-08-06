@@ -21,7 +21,7 @@ def main():
 		columns_drop = ['worst_status_active_inv','uuid']
 		data = data.drop(columns_drop , axis = 1)
 
-		model = pickle.load(open('finalized_model.sav', 'rb'))
+		model = pickle.load(open('finalized_model.pkl', 'rb'))
 		enc = pickle.load(open('encoder.pkl', 'rb'))
 	
 		for index in list(data.describe(include=['O']).columns):
