@@ -25,6 +25,7 @@ def main():
 		enc = pickle.load(open('encoder.pkl', 'rb'))
 	
 		for index in list(data.describe(include=['O']).columns):
+			st.write(index)
 			data[index] = enc.transform(np.array(data[index]).reshape(-1,1))
 		
 		predictions = model.predict_proba(data.iloc[:,1:])
