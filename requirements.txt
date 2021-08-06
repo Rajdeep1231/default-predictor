@@ -5,5 +5,6 @@ pandas>=0.19
 streamlit
 Pillow
 xgboost
+scikit-learn
 pickle-mixin
 pybase64
